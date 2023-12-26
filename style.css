@@ -1,0 +1,119 @@
+body{
+    background-color: black;
+    color: #e4e4e7;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    margin: 0;
+}
+
+.container{
+    margin: 0 auto;
+    width: 1120;
+    padding: 10px 0;
+    background-color: #1D1D20;
+    border-left: 1px solid #313135;
+    border-right: 1px solid #313135;
+}
+
+.container > * {
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+/* nav bars */
+.nav-main{
+    background-color: #3B3B40;
+    border: 1px solid #4E4E56;
+    width: 33%;
+    margin: 2rem auto;
+    border-radius: 25px;
+}
+
+nav > ul{
+    display: flex;
+    list-style-type: none;
+    padding: 0 0.5rem;
+    margin: 10px 0;
+}
+
+nav > ul > li{
+    flex: 1 1 0;
+    text-align: center;
+}
+
+.footer-nav > ul > li{
+    text-align: left;
+}
+
+/* anchor tags */
+a:link{
+    color: white;
+    text-decoration: none;
+}
+
+a:visited{
+    color: white;
+}
+
+a:hover{
+    color: #14b8a6;
+}
+
+a:active{
+    color: 109384;
+}
+/* ----------- */
+
+.footer-padding{
+    padding-top: 2.5rem;
+    padding-bottom: 4rem;
+    border-top: 1px solid #313135;
+    border-bottom: 1px solid #313135;
+}
+
+.footer-grid{
+    display: grid;
+    grid-template-columns: 3fr 2fr 3fr;
+}
+
+.footer-name{
+    grid-column-start: -2;
+    display: flex;
+    align-items: center;
+}
+
+.profile-picture{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}
+
+.personal-desc{
+    max-width: 42rem;
+}
+
+.personal-desc > *{
+    margin-top: 1.5rem;
+}
+
+h1{
+    font-size: 3rem;
+    line-height: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.text-base{
+    line-height: 1.75rem;
+    font-size: 1rem;
+}
+
+.icons{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.icons > a{
+    margin-right: 3rem;
+}
+
+/* TODO:
+container breakpoint for less than 1120 (shrink) */
