@@ -23,7 +23,7 @@ body{
 .nav-main{
     background-color: #252529;
     border: 1px solid #3B3B40;
-    width: 33%;
+    width: 20rem;
     margin: 2rem auto;
     border-radius: 25px;
 }
@@ -42,6 +42,20 @@ nav > ul > li{
 
 .footer-nav > ul > li{
     text-align: left;
+}
+
+.vertical-nav > ul{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0 0.5rem;
+    margin: 10px;
+}
+
+.vertical-nav > ul > li{
+    text-align: left;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 /* anchor tags */
@@ -82,17 +96,38 @@ a:active{
     color: #858585;
 }
 
+.footer-margin{
+    height: 8rem;
+}
+
 .profile-picture{
-    width: 64px;
-    height: 64px;
+    width: 4rem;
+    height: 4rem;
     border-radius: 50%;
 }
 
-.personal-desc{
+.profile-picture-sec{
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+}
+
+.profile-picture-border{
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #252529;
+    border: 1px solid #3B3B40;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-text{
     max-width: 42rem;
 }
 
-.personal-desc > *{
+.header-text > *{
     margin-top: 1.5rem;
 }
 
@@ -105,6 +140,7 @@ h1{
 .text-base{
     line-height: 1.75rem;
     font-size: 1rem;
+    color: #a1a1aa;
 }
 
 .icons{
@@ -114,6 +150,22 @@ h1{
 
 .icons > a{
     margin-right: 3rem;
+}
+
+.grid-3{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+.grid-3 > div{
+    display: flex;
+    align-items: center;
+}
+
+.table-contents{
+    border: 1px solid #3B3B40;
+    border-radius: 1rem;
+    max-width: 42rem;
 }
 
 /* TODO:
