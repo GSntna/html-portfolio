@@ -191,6 +191,7 @@ container breakpoint for less than 1120 (shrink) */
         display: flex;
         justify-content: center;
         color: #858585;
+        text-align: center;
     }
 
     .footer-nav > ul > li{
