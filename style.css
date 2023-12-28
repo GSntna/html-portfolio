@@ -6,7 +6,7 @@ body{
 }
 
 .container{
-    margin: 0 auto;
+    margin: -2px auto;
     width: 1120;
     padding: 10px 0;
     background-color: #1D1D20;
@@ -170,3 +170,30 @@ h1{
 
 /* TODO:
 container breakpoint for less than 1120 (shrink) */
+
+@media(max-width:1200px){
+    .container{
+        margin: -2px auto;
+        width: 100%;
+    }
+    .nav-main{
+        display: none;
+    }
+
+    .footer-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .footer-name{
+        grid-row-start: -2;
+        display: flex;
+        justify-content: center;
+        color: #858585;
+    }
+
+    .footer-nav > ul > li{
+        text-align: center;
+    }
+}
