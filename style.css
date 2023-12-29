@@ -197,4 +197,9 @@ container breakpoint for less than 1120 (shrink) */
     .footer-nav > ul > li{
         text-align: center;
     }
+
+    h1{
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
 }
