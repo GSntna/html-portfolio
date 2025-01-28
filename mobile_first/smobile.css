@@ -1,0 +1,330 @@
+/* INITIAL STYLES */
+:root{
+    box-sizing: border-box;
+    font-size: calc(1vw + 0.75em);
+}
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+body{
+    /* default: dark mode */
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    background-color:#E9EDED;
+    color:#121416;
+    transition: background-color 1s;
+    transition: color 1s;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+    position: sticky;
+    top: 1em;
+    transition: 0.35s;
+}
+
+hr{
+    border: none;
+    background-color: #12141699;
+    height: 1px;
+    transition: background-color 1s;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+a{
+    color: #121416;
+    text-decoration: none;
+}
+
+p{
+    line-height: 1.5em;
+    transition: color 1s;
+}
+
+/* THEME */
+.dark-mode{
+    background-color: #1C1F22;
+    color:#F3F5F6;
+}
+
+.dark-mode a{
+    color: #F3F5F6;
+}
+
+#mode-toggle{
+    background-color: transparent;
+    padding: 1rem;
+    border-radius: 100%;
+    border-color: #1C1F2299;
+    border-width: 0.15rem;
+}
+
+.dark-mode #mode-toggle{
+    border-color: #F3F5F699;
+}
+
+.theme-icon {
+    min-width: 16px;
+    min-height: 16px;
+    width: 1rem;
+    height: 1rem;
+    fill: #121416D0;
+}
+
+.dark-mode .theme-icon{
+    fill: #F3F5F6D0;
+}
+
+.dark-mode hr{
+    background-color: #F3F5F699;
+}
+
+.social-icon {
+    min-width: 25px;
+    min-height: 25px;
+    width: 1rem;
+    height: 1rem;
+    fill: #121416D0;
+    transition: fill 1s;
+}
+
+.title-icon{
+    min-width: 16px;
+    min-height: 16px;
+    width: 1.3em;
+    height: 1.3em;
+}
+
+.dark-mode .social-icon{
+    fill: #F3F5F6D0;
+}
+
+.sticky{
+    background-color: #dee2e6;
+    padding: 5px;
+    border-radius: 50px;
+    border: solid 1px #12141699;
+    margin: 0 4rem;
+    transition: 0.75s; /* Add smooth transition effect */
+}
+
+.dark-mode .sticky{
+    background-color: #343a40;
+    border: solid 1px #F3F5F699;
+}
+
+/* SECTIONS */
+section{
+    margin: 2rem 0;
+}
+
+/* DIV STYLES */
+.container{
+    margin: 0 2rem;
+}
+
+.sq-border{
+    border: 1px solid #12141699;
+    border-radius: 1em;
+    padding: 0.2em 1.5em;
+
+}
+
+.dark-mode .sq-border{
+    border-color: #F3F5F699;;
+}
+
+/* POSITIONS */
+
+.columns{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.space-around{
+    display: flex;
+    justify-content: space-around;
+}
+
+.space-between{
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-allign-flex{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1em;
+}
+
+/* DROPDOWN MENU */
+#dropdown-menu{
+    background-color: transparent;
+    padding: 0 1rem;
+    border: none;
+    content: "\2261";
+}
+
+/* Hide dropdown content by default */
+.dropdown-content {
+    display: none;
+    position: fixed;
+    border-radius: 0 0 10px 10px;
+    border: 1px solid #C6CCD2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #E9EDED;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.menu-container{
+    pointer-events: none;
+}
+
+.bar1{
+    width: 2rem;
+    height: 5px;
+    background-color: #121416D0;
+    margin: 6px 0;
+    pointer-events: none;
+    transition: background-color 1s;
+}
+
+.bar2{
+    width: 1.5rem;
+    height: 5px;
+    background-color: #121416D0;
+    margin: 6px auto;
+    pointer-events: none;
+    transition: background-color 1s;
+}
+
+.dark-mode .menu-container > *{
+    background-color: #F3F5F6D0;
+}
+
+.dark-mode .dropdown-content{
+    border: 1px solid #373D43;
+    background-color: #1C1F22;
+}
+
+/* Close button */
+#close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #121416;
+}
+
+.dark-mode #close-btn{
+    color: #F3F5F6;
+}
+
+/* Animation for entrance */
+.dropdown-content.open {
+    display: block;
+    animation: slideIn 0.3s ease-out forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Animation for exit */
+.dropdown-content.closed {
+    animation: slideOut 0.3s ease-in forwards;
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+.dropdown-content > ul > li > a{
+    display: block;
+    padding: 0.8em 1em;
+    font-weight: normal;
+}
+
+
+/* TEXT STYLES */
+
+.text-base{
+    color: #343A40;
+}
+
+.dark-mode .text-base{
+    color: #ADB5BD;
+}
+
+.text-small{
+    font-size: 0.7em;
+}
+
+/* IMAGES */
+.profile-picture{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}
+
+.picture-border{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.4rem;
+    height: 4.4rem;
+    border-radius: 50%;
+    border: 1px solid #12141699;
+    transition: border 1s;
+}
+
+.dark-mode .picture-border{
+    border: 1px solid #F3F5F699;
+}
+
+#hp-light{
+    display: none;
+}
+
+.dark-mode #hp-light{
+    display: inline;
+}
+
+.dark-mode #hp-dark{
+    display: none;
+}
+
+.job-picture{
+    width: 2rem;
+    height: 2rem;
+}

@@ -6,7 +6,7 @@ body{
 }
 
 .container{
-    margin: -2px auto;
+    margin: -1px auto;
     width: 1120;
     padding: 10px 0;
     background-color: #1D1D20;
@@ -168,12 +168,32 @@ h1{
     max-width: 42rem;
 }
 
+.dropdown-menu{
+    display: none;
+    background-color: #252529;
+    border: 1px solid #3B3B40;
+    width: 5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 25px;
+    margin-left: auto;
+}
+
+.dropbtn{
+    background-color: transparent;
+    border: 0;
+    color: #e4e4e7;
+    font-size: 1.15rem;
+    margin: 0.75rem;
+    font-weight: bold;
+}
+
 /* TODO:
 container breakpoint for less than 1120 (shrink) */
 
 @media(max-width:1200px){
     .container{
-        margin: -2px auto;
+        margin: -1px auto;
         width: 100%;
     }
     .nav-main{
@@ -201,5 +221,11 @@ container breakpoint for less than 1120 (shrink) */
     h1{
         font-size: 2.5rem;
         line-height: 3rem;
+    }
+
+    .dropdown-menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
